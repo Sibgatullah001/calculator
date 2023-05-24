@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="monitor"></div>
+
+        <div class="all_bdt">
+            <button data-input>7</button>
+            <button data-input>8</button>
+            <button data-input>9</button>
+
+            <button data-input>4</button>
+            <button data-input>5</button>
+            <button data-input>6</button>
+
+            <button data-input>1</button>
+            <button data-input>2</button>
+            <button data-input>3</button>
+            
+            <button data-ctrl>.</button>
+            <button data-input>0</button>
+            <button data-ctrl>=</button>
+
+            <button data-ctrl>+</button>
+            <button data-ctrl>-</button>
+            <button data-ctrl>*</button>
+
+            <button data-ctrl>/</button>
+            <button data-ctrl>del</button>
+            <button data-ctrl onclick="allValueClear()">c</button>
+
+        </div>
+    </div>
+
+    <script>
+        const btns = document.querySelectorAll('button');
+        const monitor = document.querySelector('.monitor');
+
+        btns.forEach((btn,i) => {
+            btn.addEventListener("click",(e)=>{
+                if(e.target.dataset.input == ""){
+                    let num = Number(e.target.innerText);
+                    monitor.innerText += num;
+                }else{
+                    console.log('not');
+                }
+            })
+        })
+        function allValueClear(){
+            monitor.innerText = "";
+        }
+    </script>
+</body>
+</html>

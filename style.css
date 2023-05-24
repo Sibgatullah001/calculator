@@ -1,0 +1,19 @@
+.app {
+    width: 250px;
+    margin: 0 auto;
+}
+.monitor {
+    padding: 5px;
+    height: 30px;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: right;
+}
+.all_bdt {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+button {
+    padding: 7px;
+}
